@@ -3,11 +3,14 @@
 let theInput = document.querySelector(".get-repos input");
 let getButton = document.querySelector(".get-repos .get-button");
 let reposData = document.querySelector(".show-data");
-
+document.addEventListener('keydown',(e)=>{
+    if(e.keyCode == 13){
+    getRepos();
+    }
+});
 getButton.onclick = function () {
     getRepos();
 };
-//hassan1324sa
 //get repos function
 function getRepos() {
     if (theInput.value == "") {//if value is Empty
